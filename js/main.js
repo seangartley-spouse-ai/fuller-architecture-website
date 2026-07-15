@@ -252,6 +252,15 @@
   /* ---------- Contact form ---------- */
   var formStatus = document.getElementById("formStatus");
   var contactForm = document.getElementById("contactForm");
+  /* Pre-launch: form is disarmed via data-disabled so no submissions (and no
+     FormSubmit activation email) can be triggered before the site goes live. */
+  if (contactForm && contactForm.getAttribute("data-disabled") === "true") {
+    contactForm.addEventListener("submit", function (e) {
+      e.preventDefault();
+      formStatus.textContent = "The message form will be activated when the new site launches — until then, please reach us by phone or email above.";
+      formStatus.classList.remove("success");
+    });
+  }
   if (formStatus && window.location.search.indexOf("sent=1") !== -1) {
     formStatus.textContent = "Thank you! Your message has been sent — we'll be in touch soon.";
     formStatus.classList.add("success");
