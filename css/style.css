@@ -527,6 +527,8 @@ a { color: var(--accent-dark); text-decoration: none; }
   margin-top: 8px;
 }
 .contact-card p { color: var(--ink-soft); }
+.contact-card p strong { color: var(--ink); font-weight: 500; }
+.contact-card sup { font-size: .65em; }
 .social-links a { margin-right: 18px; border-bottom: 1px solid var(--accent); padding-bottom: 2px; }
 .contact-map iframe {
   width: 100%;

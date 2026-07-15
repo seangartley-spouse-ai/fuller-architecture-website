@@ -107,5 +107,6 @@ articles go at the top of the list. Each entry has:
 - The old site's SSL certificate has **expired** — when relaunching, provision
   a new certificate (free via Let's Encrypt on most hosts).
 - A contact form was intentionally omitted (the old PHP form/reCAPTCHA no
-  longer works). To add one, drop in a Formspree/Netlify-Forms form in the
-  Contact section with the firm's email address.
+  longer works). The Contact section lists kevin@fullerarchitecture.com; if a
+  form is wanted later, drop in a Formspree/Netlify-Forms form pointed at that
+  address.
