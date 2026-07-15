@@ -5,7 +5,7 @@
 (function () {
   "use strict";
 
-  var CATEGORY_ORDER = ["Religious", "Financial", "Civic", "Education", "Commercial", "Planning"];
+  var CATEGORY_ORDER = ["Religious", "Financial", "Civic", "Education", "Commercial", "Veterinary", "Healthcare", "Planning"];
 
   /* Escape data-file values before inserting into HTML. The data files are
      hand-edited (see README), so treat their contents as untrusted text. */
