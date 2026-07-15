@@ -163,12 +163,39 @@
         </p>
       </div>
     </div>
-    <div class="contact-map">
-      <iframe
-        title="Map to Fuller Architecture, 68 Court Square, Mocksville NC"
-        src="https://maps.google.com/maps?q=68%20Court%20Square%2C%20Mocksville%2C%20NC%2027028&t=&z=15&ie=UTF8&iwloc=&output=embed"
-        loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    <div class="contact-form-wrap">
+      <h3 class="form-title">Send Us a Message</h3>
+      <p class="form-note" id="formStatus" role="status" aria-live="polite"></p>
+      <form id="contactForm" action="https://formsubmit.co/kevin@fullerarchitecture.com" method="POST">
+        <input type="hidden" name="_subject" value="New inquiry from fullerarchitecture.com">
+        <input type="hidden" name="_next" value="https://seangartley-spouse-ai.github.io/fuller-architecture-website/?sent=1#contact">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+        <div class="form-row">
+          <label for="cfName">Name *</label>
+          <input type="text" id="cfName" name="name" required maxlength="100" autocomplete="name">
+        </div>
+        <div class="form-row">
+          <label for="cfEmail">Email *</label>
+          <input type="email" id="cfEmail" name="email" required maxlength="150" autocomplete="email">
+        </div>
+        <div class="form-row">
+          <label for="cfPhone">Phone</label>
+          <input type="tel" id="cfPhone" name="phone" maxlength="30" autocomplete="tel">
+        </div>
+        <div class="form-row">
+          <label for="cfMessage">Message *</label>
+          <textarea id="cfMessage" name="message" required maxlength="3000" rows="5"></textarea>
+        </div>
+        <button type="submit" class="btn btn-solid form-submit">Send Message</button>
+      </form>
     </div>
+  </div>
+  <div class="contact-map">
+    <iframe
+      title="Map to Fuller Architecture, 68 Court Square, Mocksville NC"
+      src="https://maps.google.com/maps?q=68%20Court%20Square%2C%20Mocksville%2C%20NC%2027028&t=&z=15&ie=UTF8&iwloc=&output=embed"
+      loading="lazy" referrerpolicy="no-referrer" allowfullscreen sandbox="allow-scripts allow-popups"></iframe>
   </div>
 </section>
 

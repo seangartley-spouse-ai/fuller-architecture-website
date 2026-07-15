@@ -106,7 +106,13 @@ articles go at the top of the list. Each entry has:
   GitHub Pages, or any web host). No PHP or database required.
 - The old site's SSL certificate has **expired** — when relaunching, provision
   a new certificate (free via Let's Encrypt on most hosts).
-- A contact form was intentionally omitted (the old PHP form/reCAPTCHA no
-  longer works). The Contact section lists kevin@fullerarchitecture.com; if a
-  form is wanted later, drop in a Formspree/Netlify-Forms form pointed at that
-  address.
+- The contact form posts to FormSubmit.co (no account needed). **The first
+  real submission emails an activation link to kevin@fullerarchitecture.com —
+  it must be clicked once before messages are delivered.** Spam protection is
+  a hidden honeypot field (`_honey`); FormSubmit's captcha is disabled for a
+  friction-free form, which is a reasonable tradeoff for a site of this size.
+- **At domain cutover** (moving to fullerarchitecture.com): update the form's
+  hidden `_next` field in `index.html` so the post-submit redirect points at
+  the new domain, and re-provision SSL on the new host.
+- Text placed in `data/projects.js` / `data/news.js` is rendered as plain
+  text (HTML in those fields is escaped, and news links must be http/https).

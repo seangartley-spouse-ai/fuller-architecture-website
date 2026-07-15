@@ -6,6 +6,21 @@
   "use strict";
 
   var CATEGORY_ORDER = ["Religious", "Financial", "Civic", "Education", "Commercial", "Planning"];
+
+  /* Escape data-file values before inserting into HTML. The data files are
+     hand-edited (see README), so treat their contents as untrusted text. */
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#39;");
+  }
+  /* Only allow http(s) links from data files. */
+  function safeUrl(u) {
+    return /^https?:\/\//i.test(String(u || "")) ? u : "#";
+  }
   var HERO_IMAGES = [];
   for (var i = 1; i <= 11; i++) HERO_IMAGES.push("images/rotator/rotate" + i + ".jpg");
 
@@ -137,12 +152,12 @@
       card.setAttribute("aria-label", "View project: " + p.title);
       card.innerHTML =
         '<div class="card-media">' +
-        '<img src="' + imgPath(p, p.images[0]) + '" alt="' + p.title.replace(/"/g, "&quot;") + '" loading="lazy">' +
-        '<span class="card-cat">' + p.category + "</span>" +
+        '<img src="' + esc(imgPath(p, p.images[0])) + '" alt="' + esc(p.title) + '" loading="lazy">' +
+        '<span class="card-cat">' + esc(p.category) + "</span>" +
         "</div>" +
         '<div class="card-body">' +
-        '<h3 class="card-title">' + p.title + "</h3>" +
-        (p.location ? '<p class="card-loc">' + p.location + "</p>" : "") +
+        '<h3 class="card-title">' + esc(p.title) + "</h3>" +
+        (p.location ? '<p class="card-loc">' + esc(p.location) + "</p>" : "") +
         '<span class="card-view">View Project</span>' +
         "</div>";
       function open() { openModal(p); }
@@ -224,14 +239,27 @@
       var card = document.createElement("article");
       card.className = "news-card";
       card.innerHTML =
-        '<div class="news-meta"><span class="news-source">' + item.source + "</span>" +
-        '<span class="news-date">' + item.date + "</span></div>" +
-        '<h3 class="news-title">' + item.title + "</h3>" +
-        (item.quote ? '<blockquote class="news-quote">&ldquo;' + item.quote + "&rdquo;</blockquote>" : "") +
-        '<p class="news-summary">' + item.summary + "</p>" +
-        '<a class="news-link" href="' + item.url + '" target="_blank" rel="noopener">Read the Article</a>';
+        '<div class="news-meta"><span class="news-source">' + esc(item.source) + "</span>" +
+        '<span class="news-date">' + esc(item.date) + "</span></div>" +
+        '<h3 class="news-title">' + esc(item.title) + "</h3>" +
+        (item.quote ? '<blockquote class="news-quote">&ldquo;' + esc(item.quote) + "&rdquo;</blockquote>" : "") +
+        '<p class="news-summary">' + esc(item.summary) + "</p>" +
+        '<a class="news-link" href="' + esc(safeUrl(item.url)) + '" target="_blank" rel="noopener">Read the Article</a>';
       newsGrid.appendChild(card);
     });
+  }
+
+  /* ---------- Contact form ---------- */
+  var formStatus = document.getElementById("formStatus");
+  var contactForm = document.getElementById("contactForm");
+  if (formStatus && window.location.search.indexOf("sent=1") !== -1) {
+    formStatus.textContent = "Thank you! Your message has been sent — we'll be in touch soon.";
+    formStatus.classList.add("success");
+    if (contactForm) contactForm.reset();
+    // Clean the query string so a refresh doesn't repeat the message
+    if (window.history && window.history.replaceState) {
+      window.history.replaceState(null, "", window.location.pathname + "#contact");
+    }
   }
 
   /* ---------- Footer year ---------- */
