@@ -122,21 +122,6 @@ const PROJECTS = [
     ]
   },
   {
-    "slug": "bethumc",
-    "title": "Bethlehem United Methodist Church",
-    "location": "Advance, North Carolina",
-    "category": "Religious",
-    "featured": false,
-    "description": "This 9,200 sf addition includes a new fellowship hall, large stage, commercial kitchen, new toilet rooms, storage, a pre-school wing and a large gathering lobby. There is also the addition of a cooking porch, drop-off canopy, and covered walkways that connect the existing fellowship space, education facilities and sanctuary.",
-    "folder": "bethumc",
-    "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg",
-      "db4.jpg"
-    ]
-  },
-  {
     "slug": "centerumc",
     "title": "Center United Methodist Church",
     "location": "Welcome, North Carolina",
@@ -185,21 +170,6 @@ const PROJECTS = [
     ]
   },
   {
-    "slug": "firstpres",
-    "title": "First Presbyterian Church",
-    "location": "Mocksville, North Carolina",
-    "category": "Religious",
-    "featured": false,
-    "description": "Work for this historic downtown Mocksville congregation, designed to respect the church's architectural heritage. (Description drafted for client review.)",
-    "folder": "firstpres",
-    "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg",
-      "db4.jpg"
-    ]
-  },
-  {
     "slug": "firstumc",
     "title": "First United Methodist Church",
     "location": "Mocksville, North Carolina",
@@ -233,52 +203,6 @@ const PROJECTS = [
     ]
   },
   {
-    "slug": "holycross",
-    "title": "Holy Cross Lutheran Church",
-    "location": "",
-    "category": "Religious",
-    "featured": false,
-    "description": "A church project designed to give the congregation an inviting, functional home for worship and community life. (Description drafted for client review.)",
-    "folder": "holycross",
-    "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg",
-      "db4.jpg",
-      "db5.jpg"
-    ]
-  },
-  {
-    "slug": "jerusalembaptist",
-    "title": "Jerusalem Baptist Church",
-    "location": "",
-    "category": "Religious",
-    "featured": false,
-    "description": "A church facility designed to blend traditional forms with the practical needs of a modern congregation. (Description drafted for client review.)",
-    "folder": "jerusalembaptist",
-    "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg",
-      "db4.jpg"
-    ]
-  },
-  {
-    "slug": "midway",
-    "title": "Midway United Methodist Church",
-    "location": "Midway, North Carolina",
-    "category": "Religious",
-    "featured": false,
-    "description": "This 2-story addition to an existing church campus is comprised of a 7,925 SF fellowship hall facility with lower level classrooms. The new facility was connected to the existing with a 2-story corridor and elevator addition making the majority of the campus handicap accessible. Care was taken to aesthetically blend the new facility with the existing traditional building.",
-    "folder": "midway",
-    "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg",
-      "db4.jpg"
-    ]
-  },
-  {
     "slug": "newhope",
     "title": "New Hope United Methodist Church",
     "location": "Winston-Salem, North Carolina",
@@ -292,38 +216,6 @@ const PROJECTS = [
       "db3.jpg",
       "db4.jpg",
       "db5.jpg"
-    ]
-  },
-  {
-    "slug": "oakgroveumc",
-    "title": "Oak Grove United Methodist Church",
-    "location": "",
-    "category": "Religious",
-    "featured": false,
-    "description": "An addition and renovation designed to complement the existing church while expanding fellowship and education space. (Description drafted for client review.)",
-    "folder": "oakgroveumc",
-    "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg",
-      "db4.jpg"
-    ]
-  },
-  {
-    "slug": "orpres",
-    "title": "Oak Ridge Presbyterian Church",
-    "location": "Oak Ridge, North Carolina",
-    "category": "Religious",
-    "featured": false,
-    "description": "This 8,400 sf Worship/Education facility was completed in 1997 for a new church congregation. The facility was designed to represent the congregation's openness to the community via the glass-enclosed corridor oriented toward the entry. The traditional look of the facility blends with the historic surroundings in the Oakridge community.",
-    "folder": "orpres",
-    "images": [
-      "main1.jpg",
-      "main2.jpg",
-      "main3.jpg",
-      "main4.jpg",
-      "main5.jpg",
-      "main6.jpg"
     ]
   },
   {
@@ -344,21 +236,6 @@ const PROJECTS = [
     ]
   },
   {
-    "slug": "seventhday",
-    "title": "Seventh Day Adventist Church",
-    "location": "",
-    "category": "Religious",
-    "featured": false,
-    "description": "A new worship facility designed to serve a growing congregation with a welcoming sanctuary and flexible fellowship space. (Description drafted for client review.)",
-    "folder": "seventhday",
-    "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg",
-      "db4.jpg"
-    ]
-  },
-  {
     "slug": "shiloh",
     "title": "Shiloh United Methodist Church",
     "location": "Lexington, North Carolina",
@@ -373,36 +250,6 @@ const PROJECTS = [
       "db4.jpg",
       "db5.jpg",
       "db6.jpg"
-    ]
-  },
-  {
-    "slug": "trinitypres",
-    "title": "Trinity Presbyterian Church",
-    "location": "Winston-Salem, North Carolina",
-    "category": "Religious",
-    "featured": false,
-    "description": "This 7,000 sf contemporary design, completed in 2004, provides the church with a new spacious fellowship hall on the main floor and classroom space below. The connecting interior space was reconfigured to accommodate accessible toilet rooms and office space. Care was taken to blend the new structure with the unique 60's style architecture. The first phase of a columbarium garden was added to the church campus in 2009.",
-    "folder": "trinitypres",
-    "images": [
-      "main1.jpg",
-      "main2.jpg",
-      "main3.jpg",
-      "main4.jpg",
-      "main5.jpg"
-    ]
-  },
-  {
-    "slug": "twincity",
-    "title": "Twin City Bible Church",
-    "location": "Winston-Salem, North Carolina",
-    "category": "Religious",
-    "featured": false,
-    "description": "The church desired a complete new fresh look to their 1960's style campus. The project entails the addition of a new 3,700 sf office/educ. wing, 1,100 sf of new lobby/toilet space, 3,750 sf of new lobby circulation space with an elevator and complete new site work. All this utilizes good existing space while adding the necessary components for growth, functionality and beauty.",
-    "folder": "twincity",
-    "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg"
     ]
   },
   {
@@ -585,36 +432,6 @@ const PROJECTS = [
     ]
   },
   {
-    "slug": "dcems601",
-    "title": "Davie County EMS Station — 601 South",
-    "location": "Davie County, North Carolina",
-    "category": "Civic",
-    "featured": false,
-    "description": "A satellite EMS station extending emergency coverage in southern Davie County, with efficient bays and crew support spaces. (Description drafted for client review.)",
-    "folder": "dcems601",
-    "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg",
-      "db4.jpg"
-    ]
-  },
-  {
-    "slug": "dchumane",
-    "title": "Humane Society of Davie County",
-    "location": "Mocksville, North Carolina",
-    "category": "Civic",
-    "featured": false,
-    "description": "An animal shelter and adoption center designed to be welcoming to visitors while providing healthy, humane housing for the animals in its care. (Description drafted for client review.)",
-    "folder": "dchumane",
-    "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg",
-      "db4.jpg"
-    ]
-  },
-  {
     "slug": "mocksvillefire",
     "title": "Mocksville Fire Station",
     "location": "Mocksville, North Carolina",
@@ -645,21 +462,6 @@ const PROJECTS = [
       "db4.jpg",
       "db5.jpg",
       "db6.jpg"
-    ]
-  },
-  {
-    "slug": "troutmanth",
-    "title": "Troutman Town Hall Expansion",
-    "location": "Troutman, North Carolina",
-    "category": "Civic",
-    "featured": false,
-    "description": "Currently in schematic design, the 23,000 sf addition and renovation of the existing Town Hall will expand all current services, including new Council chambers, renovated administrative offices, and new offices for the planning, engineering, public works and police department. The layout has an inner courtyard to give employees an opportunity for time outdoors, and to help let natural light into the building.",
-    "folder": "troutmanth",
-    "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg",
-      "db4.jpg"
     ]
   },
   {
