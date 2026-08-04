@@ -1,1 +1,31 @@
 .claude/
+debug.log
+tmp/
+source-photo-archives/
+source-photos/
+
+# Local source archives. Curated web-ready selections live in images/featured/.
+FRQ Info and Logo/
+images/1-religious/
+images/3-civic/
+images/HILLSDALE DENTAL/
+images/MT. AIRY DENTAL/
+images/MT. TABOR ANIMAL HOSPITAL/
+images/MYRTLE GROVE ANIMAL HOSPITAL/
+images/NEXT DOOR DENTAL/
+images/OAKRIDGE PRES/
+images/PASSIONATE PAWS ANIMAL HOSPITAL/
+images/ROCC/
+images/SOUTHEAST SMILES/
+images/SUMMIT EYE CARE/
+images/TWIN CITY BIBLE CHURCH/
+images/The Pet Space - Lexington, SC/
+images/URBAN TAILS VETERINARY HOSPITAL/
+images/WELCOME WAGGIN' ANIMAL HOSPITAL/
+images/YUMC.jpg
+images/ccc/Entry.png
+images/ccc/ccc ext 1.png
+images/ccc/ccc ext 2.png
+images/ccc/hall 2.png
+images/ccc/hall.jpg
+images/ccc/hall.png

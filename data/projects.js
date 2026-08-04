@@ -61,14 +61,14 @@ const PROJECTS = [
     "category": "Religious",
     "featured": true,
     "description": "This new 50,000 sf contemporary worship campus has a 1500 seat sanctuary with state of the art audio/visual technology, a dedicated youth multipurpose room (kids rocc) and a children's education wing. The focal point of the facility is the entry lobby/coffee bar gathering area that is truly a multi-use space.",
-    "folder": "riveroaks",
+    "folder": "featured/riveroaks",
     "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg",
-      "db4.jpg",
-      "db5.jpg",
-      "db6.jpg"
+      "image-01.jpg",
+      "image-02.jpg",
+      "image-03.jpg",
+      "image-04.jpg",
+      "image-05.jpg",
+      "image-06.jpeg"
     ]
   },
   {
@@ -150,6 +150,21 @@ const PROJECTS = [
       "db2.jpg",
       "db3.jpg",
       "db4.jpg"
+    ]
+  },
+  {
+    "slug": "twincitybible",
+    "title": "Twin City Bible Church",
+    "location": "Winston-Salem, North Carolina",
+    "category": "Religious",
+    "featured": true,
+    "description": "A campus master plan and phased addition gave this 1960s church a fresh identity, new office and education space, expanded gathering areas, improved accessibility and an elevator. The design makes thoughtful use of the existing facility while supporting continued growth.",
+    "folder": "featured/twin-city",
+    "images": [
+      "image-01.jpeg",
+      "image-02.jpeg",
+      "image-03.jpeg",
+      "image-04.jpeg"
     ]
   },
   {
@@ -375,13 +390,14 @@ const PROJECTS = [
     "category": "Civic",
     "featured": true,
     "description": "This is a 6,600 sf branch library, built in 2011, located in a rural setting on the outskirts of the small town of East Bend, NC. The building accommodates all the library's collections and includes a 50-seat community meeting room. Skylight dormers on the front of the building bring natural light to the interior space where the open floor plan makes room for technology, research and comfortable reading spaces.",
-    "folder": "eblib",
+    "folder": "featured/east-bend-library",
     "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg",
-      "db4.jpg",
-      "db5.jpg"
+      "image-01.jpg",
+      "image-02.jpg",
+      "image-03.jpg",
+      "image-04.jpg",
+      "image-05.jpg",
+      "image-06.jpg"
     ]
   },
   {
@@ -391,13 +407,14 @@ const PROJECTS = [
     "category": "Civic",
     "featured": true,
     "description": "The Art Center is an adaptive reuse project located in the heart of Yadkinville, NC. The existing 10,500 sf building and attached plaza have been renovated to provide the community a fine arts gallery, staff offices, internet cafe, classrooms and a 192-seat, state of the art performing arts theatre. A historical presence is maintained on Main Street while contemporary elements have been introduced on the plaza side.",
-    "folder": "ycac",
+    "folder": "featured/ycac",
     "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg",
-      "db4.jpg",
-      "db5.jpg"
+      "image-01.jpg",
+      "image-02.jpg",
+      "image-03.jpg",
+      "image-04.jpg",
+      "image-05.jpg",
+      "image-06.jpg"
     ]
   },
   {
@@ -454,14 +471,12 @@ const PROJECTS = [
     "category": "Civic",
     "featured": false,
     "description": "Completed in 2010 this 6,800 sf library is the Troutman Branch of the Iredell Public Library system. Nestled in a neighborhood of early 20th century homes the library was designed to be reminiscent of the detailing found in these homes. The library committee wanted a facility that had a warm comfortable feel and that was realized in the vast amount of warm stained white oak woodwork and the warm tones of color used.",
-    "folder": "troutlib",
+    "folder": "featured/troutman-library",
     "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg",
-      "db4.jpg",
-      "db5.jpg",
-      "db6.jpg"
+      "image-01.jpg",
+      "image-02.jpg",
+      "image-03.jpg",
+      "image-04.jpg"
     ]
   },
   {
@@ -527,6 +542,37 @@ const PROJECTS = [
       "main4.jpg",
       "main5.jpg",
       "main6.jpg"
+    ]
+  },
+  {
+    "slug": "iredell-courthouse",
+    "title": "Iredell County Historic Courthouse",
+    "location": "Statesville, North Carolina",
+    "category": "Civic",
+    "featured": true,
+    "description": "Preservation and accessibility improvements support the continued civic life of this landmark courthouse while respecting its classical character. The work protects a defining piece of the streetscape and helps the historic building remain useful to the community. (Description drafted for client review.)",
+    "folder": "featured/iredell-courthouse",
+    "images": [
+      "image-01.jpg",
+      "image-02.jpg",
+      "image-03.jpg",
+      "image-04.jpg"
+    ]
+  },
+  {
+    "slug": "mebane-education",
+    "title": "Davie County Mebane Education Center",
+    "location": "Mocksville, North Carolina",
+    "category": "Education",
+    "featured": true,
+    "description": "A thoughtful renovation of Davie County Schools' Mebane Education Center creates clear circulation, welcoming administrative spaces and flexible rooms for training and collaboration. The renewed interiors give the existing facility a durable, professional setting for educators and district staff. (Description drafted for client review.)",
+    "folder": "featured/mebane-education",
+    "images": [
+      "image-01.jpeg",
+      "image-02.jpeg",
+      "image-03.jpeg",
+      "image-04.jpeg",
+      "image-05.jpeg"
     ]
   },
   {
@@ -651,14 +697,76 @@ const PROJECTS = [
     "category": "Veterinary",
     "featured": false,
     "description": "A contemporary animal hospital organized for smooth patient flow, with bright public spaces up front and efficient treatment, surgery and support spaces beyond. (Description drafted for client review.)",
-    "folder": "mttaboranimal",
+    "folder": "featured/mt-tabor-animal",
     "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg",
-      "db4.jpg",
-      "db5.jpg",
-      "db6.jpg"
+      "image-01.jpeg",
+      "image-02.jpeg",
+      "image-03.jpeg",
+      "image-04.jpeg",
+      "image-05.jpeg",
+      "image-06.jpeg"
+    ]
+  },
+  {
+    "slug": "ark-veterinary",
+    "title": "ARK Veterinary Services",
+    "location": "",
+    "category": "Veterinary",
+    "featured": true,
+    "description": "A purpose-built veterinary facility with a memorable street presence and a highly organized clinical plan. Branded reception spaces, abundant daylight and durable finishes create a professional environment that remains welcoming to clients and their pets. (Description drafted for client review.)",
+    "folder": "featured/ark-veterinary",
+    "images": [
+      "image-01.jpeg",
+      "image-02.jpeg",
+      "image-03.jpeg",
+      "image-04.jpeg"
+    ]
+  },
+  {
+    "slug": "bright-vet",
+    "title": "Bright Vet",
+    "location": "",
+    "category": "Veterinary",
+    "featured": true,
+    "description": "Bright Vet reimagines the veterinary experience through warm wood tones, playful color and carefully integrated artwork. Efficient treatment spaces sit alongside calm, hospitality-inspired client areas that give the practice a distinctive identity. (Description drafted for client review.)",
+    "folder": "featured/bright-vet",
+    "images": [
+      "image-01.jpg",
+      "image-02.jpg",
+      "image-03.jpg",
+      "image-04.jpg",
+      "image-05.jpg"
+    ]
+  },
+  {
+    "slug": "country-vet",
+    "title": "The Country Vet",
+    "location": "",
+    "category": "Veterinary",
+    "featured": true,
+    "description": "A veterinary hospital with the familiar scale and character of a country home. The traditional exterior gives the practice an approachable identity while the interior supports modern treatment, boarding and day-to-day clinical operations. (Description drafted for client review.)",
+    "folder": "featured/country-vet",
+    "images": [
+      "image-01.jpg",
+      "image-02.jpg",
+      "image-03.jpg",
+      "image-04.jpg"
+    ]
+  },
+  {
+    "slug": "five-points",
+    "title": "5 Points Animal Hospital",
+    "location": "",
+    "category": "Veterinary",
+    "featured": true,
+    "description": "A full-service animal hospital designed around an easy client journey and efficient clinical workflow. Timber detailing gives the exterior a strong identity, while bright reception, exam and treatment spaces support a modern veterinary team. (Description drafted for client review.)",
+    "folder": "featured/five-points",
+    "images": [
+      "image-01.jpeg",
+      "image-02.jpeg",
+      "image-03.jpeg",
+      "image-04.jpeg",
+      "image-05.jpeg"
     ]
   },
   {
@@ -748,13 +856,29 @@ const PROJECTS = [
     "category": "Healthcare",
     "featured": false,
     "description": "A modern dental practice whose warm materials and comfortable scale reflect its small-town setting while housing state-of-the-art clinical spaces. (Description drafted for client review.)",
-    "folder": "mtairydental",
+    "folder": "featured/mt-airy-dental",
     "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg",
-      "db4.jpg",
-      "db5.jpg"
+      "image-01.jpeg",
+      "image-02.jpeg",
+      "image-03.jpeg",
+      "image-04.jpeg",
+      "image-05.jpeg",
+      "image-06.jpeg"
+    ]
+  },
+  {
+    "slug": "cardinal-urgent-care",
+    "title": "Cardinal Urgent Care",
+    "location": "",
+    "category": "Healthcare",
+    "featured": true,
+    "description": "A compact urgent care clinic planned for clarity, comfort and efficient patient flow. A composed reception area establishes a reassuring first impression, while durable clinical spaces support fast-moving daily care. (Description drafted for client review.)",
+    "folder": "featured/cardinal-urgent-care",
+    "images": [
+      "image-01.jpeg",
+      "image-02.jpeg",
+      "image-03.jpeg",
+      "image-04.jpeg"
     ]
   },
   {
@@ -794,13 +918,14 @@ const PROJECTS = [
     "category": "Healthcare",
     "featured": false,
     "description": "An eye care clinic whose crisp, light-filled interiors support both the patient experience and the precise technical needs of a modern optometry practice. (Description drafted for client review.)",
-    "folder": "summiteye",
+    "folder": "featured/summit-eye",
     "images": [
-      "db1.jpg",
-      "db2.jpg",
-      "db3.jpg",
-      "db4.jpg",
-      "db5.jpg"
+      "image-01.jpeg",
+      "image-02.jpeg",
+      "image-03.jpg",
+      "image-04.jpeg",
+      "image-05.jpeg",
+      "image-06.jpeg"
     ]
   },
   {
@@ -851,5 +976,175 @@ const PROJECTS = [
       "main5.jpg",
       "main6.jpg"
     ]
+  },
+  {
+    "slug": "mt-tabor-umc",
+    "title": "Mt. Tabor United Methodist Church",
+    "location": "Winston-Salem, North Carolina",
+    "category": "Religious",
+    "featured": true,
+    "description": "A substantial church campus expansion brings together worship, education and gathering spaces through a cohesive traditional design. Covered walks, carefully detailed brickwork and bright children's areas support an active multigenerational congregation. (Description drafted for client review.)",
+    "folder": "featured/mt-tabor-umc",
+    "images": ["image-01.jpg", "image-02.jpg", "image-03.jpg", "image-04.jpg", "image-05.jpg"]
+  },
+  {
+    "slug": "happy-tails",
+    "title": "Happy Tails Veterinary Emergency Clinic",
+    "location": "",
+    "category": "Veterinary",
+    "featured": true,
+    "description": "A purpose-built emergency veterinary clinic pairs a distinctive contemporary exterior with clear, efficient clinical circulation. The welcoming reception area leads to durable treatment and support spaces designed for around-the-clock care. (Description drafted for client review.)",
+    "folder": "featured/happy-tails",
+    "images": ["image-01.jpg", "image-02.jpg", "image-03.jpg", "image-04.jpg", "image-05.jpg"]
+  },
+  {
+    "slug": "island-pet",
+    "title": "Island Pet Urgent Care",
+    "location": "",
+    "category": "Veterinary",
+    "featured": true,
+    "description": "A bright, coastal-inspired urgent care clinic creates a calm setting for pets and their owners. An inviting reception area and highly organized treatment spaces support an efficient veterinary team. (Description drafted for client review.)",
+    "folder": "featured/island-pet",
+    "images": ["image-01.jpg", "image-02.jpg", "image-03.jpg", "image-04.jpg", "image-05.jpg"]
+  },
+  {
+    "slug": "lewisville-animal",
+    "title": "Lewisville Animal Hospital",
+    "location": "Lewisville, North Carolina",
+    "category": "Veterinary",
+    "featured": true,
+    "description": "A polished renovation gives this established animal hospital a more open client experience and an efficient clinical environment. Soft colors, abundant daylight and durable finishes provide a calm backdrop for daily care. (Description drafted for client review.)",
+    "folder": "featured/lewisville-animal",
+    "images": ["image-01.jpg", "image-02.jpg", "image-03.jpg", "image-04.jpg", "image-05.jpg"]
+  },
+  {
+    "slug": "midway-animal",
+    "title": "Midway Animal Hospital",
+    "location": "",
+    "category": "Veterinary",
+    "featured": true,
+    "description": "A new veterinary hospital combines a welcoming lodge-like exterior with a warm, contemporary interior. Client areas, exam rooms and treatment spaces are organized for intuitive movement and long-term flexibility. (Description drafted for client review.)",
+    "folder": "featured/midway-animal",
+    "images": ["image-01.jpg", "image-02.jpg", "image-03.jpg", "image-04.jpg", "image-05.jpg"]
+  },
+  {
+    "slug": "northwest-animal",
+    "title": "Northwest Animal Hospital",
+    "location": "",
+    "category": "Veterinary",
+    "featured": true,
+    "description": "A residentially scaled animal hospital balances a familiar neighborhood presence with the technical requirements of modern veterinary care. Its expanded clinical spaces support treatment, surgery and boarding within a clear, durable plan. (Description drafted for client review.)",
+    "folder": "featured/northwest-animal",
+    "images": ["image-01.jpg", "image-02.jpg", "image-03.jpg", "image-04.jpg", "image-05.jpg"]
+  },
+  {
+    "slug": "sage-pet",
+    "title": "Sage Pet Hospital",
+    "location": "",
+    "category": "Veterinary",
+    "featured": true,
+    "description": "An existing commercial building is reworked into an approachable veterinary hospital with a bright, composed interior. Soft green tones and efficient clinical planning give the practice a calm and professional identity. (Description drafted for client review.)",
+    "folder": "featured/sage-pet",
+    "images": ["image-01.jpg", "image-02.jpg", "image-03.jpg", "image-04.jpg", "image-05.jpg"]
+  },
+  {
+    "slug": "sandy-paws",
+    "title": "Sandy Paws Veterinary Hospital",
+    "location": "",
+    "category": "Veterinary",
+    "featured": true,
+    "description": "A renewed veterinary campus pairs a friendly exterior with lively, brand-forward interiors. Reception, exam and treatment areas use durable materials and carefully planned adjacencies to support both client comfort and staff efficiency. (Description drafted for client review.)",
+    "folder": "featured/sandy-paws",
+    "images": ["image-01.jpg", "image-02.jpg", "image-03.jpg", "image-04.jpg", "image-05.jpg"]
+  },
+  {
+    "slug": "verdigris-pet",
+    "title": "Verdigris Pet Hospital",
+    "location": "",
+    "category": "Veterinary",
+    "featured": true,
+    "description": "A contemporary animal hospital shaped by natural materials, generous daylight and a strong connection to its wooded setting. Hospitality-inspired public spaces transition into a comprehensive clinical environment designed for a growing practice. (Description drafted for client review.)",
+    "folder": "featured/verdigris-pet",
+    "images": ["image-01.jpg", "image-02.jpg", "image-03.jpg", "image-04.jpg", "image-05.jpg"]
+  },
+  {
+    "slug": "wakefield-veterinary",
+    "title": "Wakefield Veterinary Hospital",
+    "location": "Wake Forest, North Carolina",
+    "category": "Veterinary",
+    "featured": true,
+    "description": "A compact veterinary practice is transformed with crisp finishes, strong daylight and a clear clinical layout. The restrained palette gives client and treatment spaces a calm, cohesive character. (Description drafted for client review.)",
+    "folder": "featured/wakefield-veterinary",
+    "images": ["image-01.jpg", "image-02.jpg", "image-03.jpg", "image-04.jpg", "image-05.jpg"]
+  },
+  {
+    "slug": "pinnacle-urgent-care",
+    "title": "Pinnacle Urgent Care",
+    "location": "",
+    "category": "Healthcare",
+    "featured": true,
+    "description": "A freestanding urgent care facility combines strong roadside visibility with a calm, efficient patient experience. The bright reception area and well-organized exam spaces support clear circulation and timely care. (Description drafted for client review.)",
+    "folder": "featured/pinnacle-urgent-care",
+    "images": ["image-01.jpg", "image-02.jpg", "image-03.jpg", "image-04.jpg", "image-05.jpg"]
+  },
+  {
+    "slug": "dragonfly-house",
+    "title": "Dragonfly House Children's Advocacy Center",
+    "location": "Mocksville, North Carolina",
+    "category": "Healthcare",
+    "featured": true,
+    "description": "A supportive, residentially scaled environment designed to help children and families feel safe and at ease. Welcoming therapy, meeting and gathering spaces balance privacy, comfort and the operational needs of the advocacy team. (Description drafted for client review.)",
+    "folder": "featured/dragonfly-house",
+    "images": ["image-01.jpg", "image-02.jpg", "image-03.jpg", "image-04.jpg"]
+  },
+  {
+    "slug": "triad-ocular-facial",
+    "title": "Triad Ocular & Facial Plastic Surgery",
+    "location": "",
+    "category": "Healthcare",
+    "featured": true,
+    "description": "A specialized medical practice with a refined, hospitality-oriented arrival experience and precisely planned clinical spaces. Natural textures, dramatic roof forms and abundant daylight establish a distinctive identity throughout. (Description drafted for client review.)",
+    "folder": "featured/triad-ocular-facial",
+    "images": ["image-01.jpg", "image-02.jpg", "image-03.jpg", "image-04.jpg", "image-05.jpg"]
+  },
+  {
+    "slug": "davie-county-park",
+    "title": "Davie County Community Park",
+    "location": "Mocksville, North Carolina",
+    "category": "Civic",
+    "featured": true,
+    "description": "The adaptive reuse of a former school campus creates a broad community destination for recreation, performance and gathering. Athletic spaces, an amphitheater, playgrounds and water features are connected through an accessible park framework. (Description drafted for client review.)",
+    "folder": "featured/davie-county-park",
+    "images": ["image-01.jpg", "image-02.jpg", "image-03.jpg", "image-04.jpg", "image-05.jpg", "image-06.jpg"]
+  },
+  {
+    "slug": "iredell-jennings-park",
+    "title": "Iredell County Jennings Park",
+    "location": "Statesville, North Carolina",
+    "category": "Civic",
+    "featured": true,
+    "description": "A community park facility designed to support public gatherings and recreation with an approachable, durable architectural character. (Description drafted for client review.)",
+    "folder": "featured/iredell-jennings-park",
+    "images": ["image-01.jpg"]
+  },
+  {
+    "slug": "mocksville-park",
+    "title": "Mocksville Downtown Park",
+    "location": "Mocksville, North Carolina",
+    "category": "Civic",
+    "featured": true,
+    "description": "A civic gathering place in the heart of Mocksville organized around a central fountain, shaded pavilions and flexible event space. Traditional materials and detailing connect the park to the character of downtown. (Description drafted for client review.)",
+    "folder": "featured/mocksville-park",
+    "images": ["image-01.jpg", "image-02.jpg", "image-03.jpg", "image-04.jpg", "image-05.jpg"]
+  },
+  {
+    "slug": "junkers-event-center",
+    "title": "Junker's Event Center",
+    "location": "",
+    "category": "Commercial",
+    "featured": true,
+    "description": "The restoration and adaptation of a historic farmhouse creates an intimate event venue with expansive porches, landscaped grounds and flexible indoor gathering spaces. Original residential character is preserved while supporting a new hospitality use. (Description drafted for client review.)",
+    "folder": "featured/junkers-event-center",
+    "images": ["image-01.jpg", "image-02.jpg", "image-03.jpg", "image-04.jpg", "image-05.jpg"]
   }
 ];

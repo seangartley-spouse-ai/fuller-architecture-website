@@ -7,6 +7,51 @@
 
   var CATEGORY_ORDER = ["Religious", "Financial", "Civic", "Education", "Commercial", "Veterinary", "Healthcare", "Planning"];
 
+  /* Client-approved projects currently available in the site library. Keep
+     these first while the remaining approved project assets are collected. */
+  var CURATED_SLUG_ORDER = [
+    "riveroaks",
+    "yadumc",
+    "ccc",
+    "twincitybible",
+    "mt-tabor-umc",
+    "mebane-education",
+    "ark-veterinary",
+    "bright-vet",
+    "country-vet",
+    "five-points",
+    "happy-tails",
+    "island-pet",
+    "lewisville-animal",
+    "midway-animal",
+    "mttaboranimal",
+    "northwest-animal",
+    "sage-pet",
+    "sandy-paws",
+    "verdigris-pet",
+    "wakefield-veterinary",
+    "cardinal-urgent-care",
+    "dragonfly-house",
+    "mtairydental",
+    "pinnacle-urgent-care",
+    "summiteye",
+    "triad-ocular-facial",
+    "davie-county-park",
+    "eblib",
+    "iredell-courthouse",
+    "iredell-jennings-park",
+    "mocksville-park",
+    "troutmanlib",
+    "ycac",
+    "junkers-event-center"
+  ];
+
+  /* Only publish the projects on the client's approved list. Legacy project
+     records remain in the data file so they can be restored without re-entry. */
+  var DISPLAY_PROJECTS = CURATED_SLUG_ORDER.map(function (slug) {
+    return PROJECTS.find(function (project) { return project.slug === slug; });
+  }).filter(Boolean);
+
   /* Escape data-file values before inserting into HTML. The data files are
      hand-edited (see README), so treat their contents as untrusted text. */
   function esc(s) {
@@ -21,8 +66,23 @@
   function safeUrl(u) {
     return /^https?:\/\//i.test(String(u || "")) ? u : "#";
   }
-  var HERO_IMAGES = [];
-  for (var i = 1; i <= 11; i++) HERO_IMAGES.push("images/rotator/rotate" + i + ".jpg");
+  var HERO_IMAGES = [
+    "images/featured/riveroaks/image-01.jpg",
+    "images/yadkinvilleumc/main1.jpg",
+    "images/ccc/db1.jpg",
+    "images/featured/twin-city/image-01.jpeg",
+    "images/featured/mt-tabor-umc/image-01.jpg",
+    "images/featured/ark-veterinary/image-01.jpeg",
+    "images/featured/bright-vet/image-01.jpg",
+    "images/featured/verdigris-pet/image-01.jpg",
+    "images/featured/triad-ocular-facial/image-02.jpg",
+    "images/featured/davie-county-park/image-01.jpg",
+    "images/featured/mebane-education/image-04.jpeg",
+    "images/featured/mt-airy-dental/image-01.jpeg",
+    "images/featured/mt-tabor-animal/image-01.jpeg",
+    "images/featured/east-bend-library/image-01.jpg",
+    "images/featured/ycac/image-01.jpg"
+  ];
 
   /* ---------- Header scroll state ---------- */
   var header = document.getElementById("siteHeader");
@@ -81,7 +141,10 @@
   /* ---------- Portfolio: filters ---------- */
   var filterBar = document.getElementById("filterBar");
   var grid = document.getElementById("projectGrid");
+  var projectResults = document.getElementById("projectResults");
+  var showMoreButton = document.getElementById("showMoreProjects");
   var activeFilter = "All";
+  var visibleCount = 12;
 
   /* "All" view: randomized mix of categories, reshuffled on each page load.
      Projects are shuffled within their category, then dealt round-robin
@@ -94,24 +157,35 @@
     }
     return a;
   }
+  function curatedIndex(project) {
+    var index = CURATED_SLUG_ORDER.indexOf(project.slug);
+    return index === -1 ? Number.MAX_SAFE_INTEGER : index;
+  }
+
+  function clientFirst(projects) {
+    return projects.slice().sort(function (a, b) {
+      return curatedIndex(a) - curatedIndex(b);
+    });
+  }
+
   var allMixed = (function () {
     var buckets = shuffle(CATEGORY_ORDER).map(function (cat) {
-      return shuffle(PROJECTS.filter(function (p) { return p.category === cat; }));
+      return shuffle(DISPLAY_PROJECTS.filter(function (p) { return p.category === cat; }));
     }).filter(function (b) { return b.length; });
     var mixed = [];
     var round = 0;
-    while (mixed.length < PROJECTS.length) {
+    while (mixed.length < DISPLAY_PROJECTS.length) {
       buckets.forEach(function (b) {
         if (b[round]) mixed.push(b[round]);
       });
       round++;
     }
-    return mixed;
+    return clientFirst(mixed);
   })();
 
   function projectCount(cat) {
-    if (cat === "All") return PROJECTS.length;
-    return PROJECTS.filter(function (p) { return p.category === cat; }).length;
+    if (cat === "All") return DISPLAY_PROJECTS.length;
+    return DISPLAY_PROJECTS.filter(function (p) { return p.category === cat; }).length;
   }
 
   ["All"].concat(CATEGORY_ORDER).forEach(function (cat) {
@@ -120,11 +194,17 @@
     var b = document.createElement("button");
     b.className = "filter-btn" + (cat === "All" ? " active" : "");
     b.setAttribute("role", "tab");
+    b.setAttribute("aria-selected", cat === "All" ? "true" : "false");
     b.innerHTML = cat + ' <span class="filter-count">' + count + "</span>";
     b.addEventListener("click", function () {
       activeFilter = cat;
-      filterBar.querySelectorAll(".filter-btn").forEach(function (x) { x.classList.remove("active"); });
+      visibleCount = cat === "All" ? 12 : DISPLAY_PROJECTS.length;
+      filterBar.querySelectorAll(".filter-btn").forEach(function (x) {
+        x.classList.remove("active");
+        x.setAttribute("aria-selected", "false");
+      });
       b.classList.add("active");
+      b.setAttribute("aria-selected", "true");
       renderGrid();
     });
     filterBar.appendChild(b);
@@ -137,12 +217,13 @@
     grid.innerHTML = "";
     var list = activeFilter === "All"
       ? allMixed
-      : PROJECTS.filter(function (p) { return p.category === activeFilter; });
+      : clientFirst(DISPLAY_PROJECTS.filter(function (p) { return p.category === activeFilter; }));
     if (!list.length) {
       grid.innerHTML = '<p class="grid-empty">No projects in this category yet.</p>';
       return;
     }
-    list.forEach(function (p, idx) {
+    var visible = list.slice(0, visibleCount);
+    visible.forEach(function (p, idx) {
       if (!p.images || !p.images.length) return;
       var card = document.createElement("article");
       card.className = "project-card";
@@ -167,7 +248,13 @@
       });
       grid.appendChild(card);
     });
+    projectResults.textContent = "Showing " + visible.length + " of " + list.length + " projects";
+    showMoreButton.parentElement.hidden = visible.length >= list.length;
   }
+  showMoreButton.addEventListener("click", function () {
+    visibleCount += 12;
+    renderGrid();
+  });
   renderGrid();
 
   /* ---------- Project modal ---------- */
@@ -181,6 +268,7 @@
   var current = null;
   var currentIdx = 0;
   var lastFocus = null;
+  var modalPanel = modal.querySelector(".modal-panel");
 
   function showImage(idx) {
     if (!current) return;
@@ -198,7 +286,7 @@
     modalTitle.textContent = p.title;
     modalLocation.textContent = p.location || "";
     modalCategory.textContent = p.category;
-    modalDesc.textContent = p.description;
+    modalDesc.textContent = p.description.replace(/\s*\(Description drafted for client review\.\)\s*$/, "");
     modalThumbs.innerHTML = "";
     p.images.forEach(function (file, i) {
       var t = document.createElement("img");
@@ -230,6 +318,19 @@
     if (e.key === "Escape") closeModal();
     if (e.key === "ArrowLeft") showImage(currentIdx - 1);
     if (e.key === "ArrowRight") showImage(currentIdx + 1);
+    if (e.key === "Tab") {
+      var focusable = modalPanel.querySelectorAll('button:not([disabled]), [href], [tabindex]:not([tabindex="-1"])');
+      if (!focusable.length) return;
+      var first = focusable[0];
+      var last = focusable[focusable.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    }
   });
 
   /* ---------- In the News ---------- */
