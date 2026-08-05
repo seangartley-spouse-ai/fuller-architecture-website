@@ -413,8 +413,7 @@ const PROJECTS = [
       "image-02.jpg",
       "image-03.jpg",
       "image-04.jpg",
-      "image-05.jpg",
-      "image-06.jpg"
+      "image-05.jpg"
     ]
   },
   {
@@ -1128,7 +1127,7 @@ const PROJECTS = [
     "featured": true,
     "description": "A community park facility designed to support public gatherings and recreation with an approachable, durable architectural character. (Description drafted for client review.)",
     "folder": "featured/iredell-jennings-park",
-    "images": ["image-01.jpg"]
+    "images": ["image-01.jpg", "image-02.jpg", "image-03.jpg", "image-04.jpg", "image-05.jpg", "image-06.jpg"]
   },
   {
     "slug": "mocksville-park",
