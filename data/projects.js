@@ -1052,7 +1052,7 @@ const PROJECTS = [
   {
     "slug": "sandy-paws",
     "title": "Sandy Paws Veterinary Hospital",
-    "location": "",
+    "location": "Wilmington, North Carolina",
     "category": "Veterinary",
     "featured": true,
     "description": "A renewed veterinary campus pairs a friendly exterior with lively, brand-forward interiors. Reception, exam and treatment areas use durable materials and carefully planned adjacencies to support both client comfort and staff efficiency. (Description drafted for client review.)",
