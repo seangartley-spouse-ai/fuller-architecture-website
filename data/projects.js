@@ -80,13 +80,13 @@ const PROJECTS = [
     "description": "This new addition of a 15,300 sf family life center incorporates a unique, exposed glue laminated wood structure rising 35' to define a contemporary worship/fellowship hall with a capacity for 325 diners, and an expanded commons area that creates a gathering space for the two worship services. There is also a commercial kitchen, new toilet facilities and an office suite.",
     "folder": "yadkinvilleumc",
     "images": [
-      "db1.jpg",
-      "main1.jpg",
       "main2.jpg",
-      "main3.jpg",
       "main4.jpg",
       "main5.jpg",
-      "main6.jpg"
+      "main6.jpg",
+      "main1.jpg",
+      "main3.jpg",
+      "db1.jpg"
     ]
   },
   {
@@ -710,7 +710,7 @@ const PROJECTS = [
   {
     "slug": "ark-veterinary",
     "title": "ARK Veterinary Services",
-    "location": "",
+    "location": "Charlotte, North Carolina",
     "category": "Veterinary",
     "featured": true,
     "description": "A purpose-built veterinary facility with a memorable street presence and a highly organized clinical plan. Branded reception spaces, abundant daylight and durable finishes create a professional environment that remains welcoming to clients and their pets. (Description drafted for client review.)",
@@ -718,14 +718,14 @@ const PROJECTS = [
     "images": [
       "image-01.jpeg",
       "image-02.jpeg",
-      "image-03.jpeg",
-      "image-04.jpeg"
+      "image-05.jpeg",
+      "image-06.jpeg"
     ]
   },
   {
     "slug": "bright-vet",
     "title": "Bright Vet",
-    "location": "",
+    "location": "Arden, North Carolina",
     "category": "Veterinary",
     "featured": true,
     "description": "Bright Vet reimagines the veterinary experience through warm wood tones, playful color and carefully integrated artwork. Efficient treatment spaces sit alongside calm, hospitality-inspired client areas that give the practice a distinctive identity. (Description drafted for client review.)",
@@ -740,8 +740,8 @@ const PROJECTS = [
   },
   {
     "slug": "country-vet",
-    "title": "The Country Vet",
-    "location": "",
+    "title": "The Country Veterinary Hospital",
+    "location": "Mocksville, North Carolina",
     "category": "Veterinary",
     "featured": true,
     "description": "A veterinary hospital with the familiar scale and character of a country home. The traditional exterior gives the practice an approachable identity while the interior supports modern treatment, boarding and day-to-day clinical operations. (Description drafted for client review.)",
@@ -750,7 +750,10 @@ const PROJECTS = [
       "image-01.jpg",
       "image-02.jpg",
       "image-03.jpg",
-      "image-04.jpg"
+      "image-04.jpg",
+      "image-05.jpg",
+      "image-06.jpg",
+      "image-07.jpg"
     ]
   },
   {
@@ -1019,8 +1022,8 @@ const PROJECTS = [
   },
   {
     "slug": "midway-animal",
-    "title": "Midway Animal Hospital",
-    "location": "",
+    "title": "Midway Animal Clinic",
+    "location": "Midway, North Carolina",
     "category": "Veterinary",
     "featured": true,
     "description": "A new veterinary hospital combines a welcoming lodge-like exterior with a warm, contemporary interior. Client areas, exam rooms and treatment spaces are organized for intuitive movement and long-term flexibility. (Description drafted for client review.)",
@@ -1119,7 +1122,7 @@ const PROJECTS = [
   },
   {
     "slug": "iredell-jennings-park",
-    "title": "Iredell County Jennings Park",
+    "title": "Jennings Park",
     "location": "Statesville, North Carolina",
     "category": "Civic",
     "featured": true,

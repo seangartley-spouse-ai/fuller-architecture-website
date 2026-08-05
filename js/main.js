@@ -68,7 +68,7 @@
   }
   var HERO_IMAGES = [
     "images/featured/riveroaks/image-01.jpg",
-    "images/yadkinvilleumc/main1.jpg",
+    "images/yadkinvilleumc/main2.jpg",
     "images/ccc/db1.jpg",
     "images/featured/twin-city/image-01.jpeg",
     "images/featured/mt-tabor-umc/image-01.jpg",
